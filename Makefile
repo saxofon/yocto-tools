@@ -4,7 +4,7 @@
 
 TOP := $(PWD)
 
-all: image
+all:
 
 help::
 	@echo "TOP Makefile help"

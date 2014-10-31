@@ -1,2 +1,10 @@
 This simple projects automates a setup of yocto tools, consisting of the
 reference distribution (Poky) and some useful layers (OpenEmbedded, TI etc).
+
+Small howto
+
+1. clone repositories
+   make clone
+
+2. whenever needed, pull in new updates
+   make pull
