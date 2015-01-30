@@ -3,6 +3,9 @@ reference distribution (Poky) and some useful layers (OpenEmbedded, TI etc).
 
 Small howto
 
+0. Prerequisites
+   Fedora: sudo yum install g++ diffstat chrpath texinfo SDL-devel
+
 1. clone repositories
    make clone
 
