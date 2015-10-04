@@ -10,8 +10,10 @@ $(TOP)/poky:
 	@mkdir -p $(TOP)/layers
 
 $(TOP)/layers/meta-%:
-	@echo "Cloning $@"
-	@cd $(TOP)/layers && git clone $(LAYER_$(patsubst $(TOP)/layers/%,%,$@)_URL)
+	@if [ ! -d $@ ]; then \
+		echo "Cloning $@" ; \
+		cd $(TOP)/layers && git clone $(LAYER_$(patsubst $(TOP)/layers/%,%,$@)_URL) ; \
+	fi
 	
 clone: poky $(patsubst meta-%,$(TOP)/layers/meta-%,$(LAYERS))
 
